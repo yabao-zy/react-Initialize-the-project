@@ -72,13 +72,13 @@ async function deleteAxios(url, params) {
  * @param {*} Timestamp 时间戳
  * @returns 返回字符串
  */
-function EN_MD5(path = '', Timestamp) {
-    let Ai = 'mobile'
-    let key = 'sjye8bx1234hd'
-    let md5Word = `X-ABC-Ai=${Ai}&X-ABC-Timestamp=${Timestamp}&path=${path}&key=${key}`
-    md5Word = MD5.hex_md5(md5Word)
-    return md5Word
-}
+// function EN_MD5(path = '', Timestamp) {
+//     let Ai = 'mobile'
+//     let key = 'sjye8bx1234hd'
+//     let md5Word = `X-ABC-Ai=${Ai}&X-ABC-Timestamp=${Timestamp}&path=${path}&key=${key}`
+//     md5Word = MD5.hex_md5(md5Word)
+//     return md5Word
+// }
 
 for (let i in urlList) {
     httpobj[i] = async function (parmes,) {
