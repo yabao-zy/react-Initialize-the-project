@@ -15,7 +15,7 @@ const styles = {
 }
 
 const Drawer = function () {
-    const { push, replace } = useHistory();
+    const { push } = useHistory();
 
     return (<div>
         <div style={styles.icon} />
