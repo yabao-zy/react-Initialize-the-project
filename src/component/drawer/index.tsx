@@ -22,7 +22,7 @@ const Drawer = function () {
         <Divider />
         <List>
             {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                <ListItem button key={text}>
+                <ListItem button key={text} onClick={() => void push("/", { id: 2 })}>
                     <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                     <ListItemText primary={text} />
                 </ListItem>

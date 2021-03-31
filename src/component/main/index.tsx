@@ -56,7 +56,6 @@ interface Props {
 }
 
 export default function ResponsiveDrawer(props: Props) {
-  const { push, replace } = useHistory();
 
   const { window } = props;
   const classes = useStyles();
