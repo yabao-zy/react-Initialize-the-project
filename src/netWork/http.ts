@@ -36,9 +36,8 @@ axios.interceptors.request.use(
  */
 axios.interceptors.response.use(
     (response) => {
-        if (response.data.errCode === 2) {
-            console.log("过期");
-        }
+        console.log(response);
+        
         return response;
     },
     (error) => {
@@ -49,7 +48,7 @@ axios.interceptors.response.use(
 // GET方法封装
 export async function getAxios(url: string, params: object) {
     let data = await axios.get(url, { params })
-    return data.data
+    return data?.data
 }
 // POST方法封装
 export async function postAxios(url: string, params: object) {
@@ -61,7 +60,7 @@ export async function postAxios(url: string, params: object) {
 // DELETE方法封装
 async function deleteAxios(url, params) {
     let data = await axios.get(url + '/' + params)
-    return data.data
+    return data?.data
 
 }
 /**
